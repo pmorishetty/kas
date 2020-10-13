@@ -6,44 +6,185 @@
     android:layout_height="match_parent"
     tools:context=".actvities.AxisOverview">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+    <EditText
+        android:id="@+id/editActualPosition"
+        android:layout_width="194dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/actual_position"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintTop_toBottomOf="@+id/axis1StatusLabel" />
+
+    <EditText
+        android:id="@+id/textActualPosition"
+        style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
+        android:layout_width="168dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:autofillHints=""
+        android:duplicateParentState="false"
+        android:focusableInTouchMode="false"
+        android:hint="@string/actual_position"
+        android:inputType="none"
+        android:singleLine="false"
+        android:text="@string/actual_position"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toStartOf="@+id/editActualPosition"
+        app:layout_constraintHorizontal_bias="0.413"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/axis1StatusLabel" />
 
-        <Button
-            android:id="@+id/btnRefresh"
-            android:layout_width="173dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="@string/refresh" />
+    <EditText
+        android:id="@+id/textCommandPosition"
+        style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
+        android:layout_width="168dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:autofillHints=""
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:hint="@string/command_position"
+        android:inputType="none"
+        android:text="@string/command_position"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textIsSelectable="true"
+        app:layout_constraintEnd_toStartOf="@+id/editActualPosition"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textActualPosition"
+        tools:text="@string/command_position" />
 
-        <TextView
-            android:id="@+id/axis1StatusLabel"
-            android:layout_width="312dp"
-            android:layout_height="37dp"
-            android:text="@string/axis1_status" />
-    </com.google.android.material.textfield.TextInputLayout>
+    <EditText
+        android:id="@+id/editCommandPosition"
+        android:layout_width="194dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:autofillHints=""
+        android:duplicateParentState="false"
+        android:ems="10"
+        android:hint="@string/command_position"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editActualPosition" />
 
-    <ListView
-        android:id="@+id/axis_status_list"
-        android:layout_width="409dp"
-        android:layout_height="565dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="3dp"
+    <EditText
+        android:id="@+id/textNormalPosition"
+        style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
+        android:layout_width="168dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:autofillHints=""
+        android:duplicateParentState="false"
+        android:enabled="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:hint="@string/normal_position"
+        android:inputType="none"
+        android:text="@string/normal_position"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toStartOf="@+id/editActualPosition"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCommandPosition" />
+
+    <EditText
+        android:id="@+id/editNormalPosition"
+        android:layout_width="194dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/normal_position"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCommandPosition" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSimulatedPoweredOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/simulated_powered_off"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxInError" />
+
+    <CheckBox
+        android:id="@+id/checkBoxPoweredOff"
+        android:layout_width="118dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/powered_off"
+        app:layout_constraintEnd_toStartOf="@+id/checkBoxPoweredOn"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNormalPosition" />
+
+    <CheckBox
+        android:id="@+id/checkBoxPoweredOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/powered_on"
+        app:layout_constraintEnd_toStartOf="@+id/checkBoxInError"
+        app:layout_constraintTop_toBottomOf="@+id/editNormalPosition" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSimulatedPoweredOn"
+        android:layout_width="177dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/simulated_powered_on"
+        app:layout_constraintEnd_toStartOf="@+id/checkBoxSimulatedPoweredOff"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxPoweredOff" />
+
+    <CheckBox
+        android:id="@+id/checkBoxInError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/in_error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editNormalPosition" />
+
+    <Button
+        android:id="@+id/btnRefresh"
+        android:layout_width="173dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/refresh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/axis1StatusLabel"
+        android:layout_width="312dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/axis1_status"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRefresh" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
