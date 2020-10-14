@@ -30,7 +30,7 @@ public class RetrofitInstance {
 
    public static Boolean setIpAddress(String ip) {
       ipAddress = ip;
-      Boolean status = true;
+      boolean status = true;
       try {
          getInstance().newBuilder().baseUrl(getBaseUrl());
       }

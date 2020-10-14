@@ -31,56 +31,20 @@ public class AxisData {
       return currentFBPosition;
    }
 
-   public void setCurrentFBPosition(Double currentFBPosition) {
-      this.currentFBPosition = currentFBPosition;
-   }
-
    public Double getCurrentPosition() {
       return currentPosition;
-   }
-
-   public void setCurrentPosition(Double currentPosition) {
-      this.currentPosition = currentPosition;
    }
 
    public Integer getFBUnitsPerTurn() {
       return fBUnitsPerTurn;
    }
 
-   public void setFBUnitsPerTurn(Integer fBUnitsPerTurn) {
-      this.fBUnitsPerTurn = fBUnitsPerTurn;
-   }
-
    public Integer getStatus() {
       return status;
    }
 
-   public void setStatus(Integer status) {
-      this.status = status;
-   }
-
-   public Boolean getBPresent() {
-      return bPresent;
-   }
-
-   public void setBPresent(Boolean bPresent) {
-      this.bPresent = bPresent;
-   }
-
-   public Integer getDriveID() {
-      return driveID;
-   }
-
-   public void setDriveID(Integer driveID) {
-      this.driveID = driveID;
-   }
-
    public String getSzName() {
       return szName;
-   }
-
-   public void setSzName(String szName) {
-      this.szName = szName;
    }
 
 }

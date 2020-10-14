@@ -34,6 +34,7 @@
         android:ems="10"
         android:hint="@string/ip_address"
         android:inputType="textNoSuggestions|textPersonName"
+        android:text="@string/pdmm_default_ip"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,13 +45,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
+        android:text="@string/default_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
-        android:autofillHints="" />
+        tools:text="@string/default_password" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
@@ -59,17 +62,20 @@
         android:layout_marginTop="33dp"
         android:ems="10"
         android:hint="@string/username"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
+        android:text="@string/default_user"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextIPAddress"
-        android:importantForAutofill="no" />
+        tools:text="@string/default_user" />
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="206dp"
         android:layout_height="65dp"
         android:layout_marginTop="56dp"
+        android:drawableBottom="@drawable/ic_login_image"
         android:text="@string/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"

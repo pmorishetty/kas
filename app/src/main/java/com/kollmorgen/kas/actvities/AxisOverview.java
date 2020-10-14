@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -29,18 +28,8 @@ public class AxisOverview extends AppCompatActivity {
 
     private  DisplayRequestThread m_display_thread;
 
-    private static final int ESCAxisStatus_Initialised = 1;
     private static final int ESCAxisStatus_PowerON = 2;
-    private static final int ESCAxisStatus_Enabled = 4;
-    private static final int ESCAxisStatus_FoundOnNetwork = 8;
-    private static final int ESCAxisStatus_Configured = 16;
-    private static final int ESCAxisStatus_Running = 32;
     private static final int ESCAxisStatus_Error = 64;
-    private static final int ESCAxisStatus_Simulated = 128;
-    private static final int ESCAxisStatus_Connected = 256;
-    private static final int ESCAxisStatus_Warning = 512;
-    private static final int ESCAxisStatus_Stopping = 1024;
-    private static final int ESCAxisStatus_Stopped = 2048;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,18 +58,6 @@ public class AxisOverview extends AppCompatActivity {
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-/*
-        Intent intent = getIntent();
-        String ip_address = intent.getStringExtra("ip_address");
-        if (ip_address != null) {
-            SetIpAddress(ip_address);
-        }
-*/
-    }
-
-    @Override
     protected void onStop() {
         super.onStop();
         m_display_thread.SetActive(false);
@@ -96,10 +73,6 @@ public class AxisOverview extends AppCompatActivity {
 
     public int getAxisId() {
         return axisId;
-    }
-
-    public void setAxisId(int axisId) {
-        this.axisId = axisId;
     }
 
     public void setAxisData(List<AxisData> axisDataList)

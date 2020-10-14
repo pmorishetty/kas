@@ -19,7 +19,7 @@ public class DisplayRequestThread extends Thread {
     final long Update_Rate_Ms = 250;
     private boolean m_active = false;
 
-    private AxisOverview m_main_activity;
+    private final AxisOverview m_main_activity;
 
     DisplayRequestThread(AxisOverview m_main_activity) {
         this.m_main_activity = m_main_activity;

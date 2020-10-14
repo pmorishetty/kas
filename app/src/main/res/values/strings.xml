@@ -1,24 +1,31 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">KAS Smart View</string>
-    <string name="title_activity_axis_overview">AxisOverview</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="previous" tools:keep="@string/previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="hello_first_fragment" tools:keep="@string/hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment" tools:keep="@string/hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="ip_address">IP Address</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
-    <string name="refresh">Refresh</string>
+    <string name="refresh" tools:keep="@string/refresh">Refresh</string>
     <string name="axis1_status">Axis Overview</string>
     <string name="actual_position">Actual Position</string>
     <string name="powered_off">Powered Off</string>
     <string name="command_position">Command Position</string>
-    <string name="normal_position">Normal Position</string>
+    <string name="normal_position" tools:keep="@string/normal_position">Normal Position</string>
     <string name="in_error">in error</string>
     <string name="powered_on">Powered On</string>
     <string name="simulated_powered_off">Simulated Powered Off</string>
     <string name="simulated_powered_on">Simulated Powered On</string>
     <string name="axis_name">Axis Name</string>
+    <string name="machine_speed">Machine Speed</string>
+    <string name="disable_motion">DISABLE</string>
+    <string name="enable_axis">Enable</string>
+    <string name="clear_fault">Clear Fault</string>
+    <string name="start_motion">Start/Run</string>
+    <string name="stop_motion">STOP</string>
+    <string name="pdmm_default_ip">10.8.233.251</string>
+    <string name="default_user">administrator</string>
+    s<string name="default_password">administrator</string>
 </resources>
