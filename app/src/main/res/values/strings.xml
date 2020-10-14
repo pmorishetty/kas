@@ -11,7 +11,7 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="refresh">Refresh</string>
-    <string name="axis1_status">Axis Positions Snapshot</string>
+    <string name="axis1_status">Axis Overview</string>
     <string name="actual_position">Actual Position</string>
     <string name="powered_off">Powered Off</string>
     <string name="command_position">Command Position</string>
@@ -20,4 +20,5 @@
     <string name="powered_on">Powered On</string>
     <string name="simulated_powered_off">Simulated Powered Off</string>
     <string name="simulated_powered_on">Simulated Powered On</string>
+    <string name="axis_name">Axis Name</string>
 </resources>

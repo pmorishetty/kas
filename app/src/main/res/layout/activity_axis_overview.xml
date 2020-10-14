@@ -75,35 +75,35 @@
         app:layout_constraintTop_toBottomOf="@+id/editActualPosition" />
 
     <EditText
-        android:id="@+id/textNormalPosition"
+        android:id="@+id/textAxisName"
         style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
         android:layout_width="168dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:autofillHints=""
         android:duplicateParentState="false"
         android:enabled="true"
         android:focusable="false"
         android:focusableInTouchMode="false"
-        android:hint="@string/normal_position"
+        android:hint="@string/axis_name"
         android:inputType="none"
-        android:text="@string/normal_position"
+        android:text="@string/axis_name"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintEnd_toStartOf="@+id/editActualPosition"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.388"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textCommandPosition" />
 
     <EditText
-        android:id="@+id/editNormalPosition"
+        android:id="@+id/editAxisName"
         android:layout_width="194dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="@string/normal_position"
+        android:hint="@string/axis_name"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editCommandPosition" />
@@ -123,13 +123,13 @@
         android:layout_width="118dp"
         android:layout_height="32dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="16dp"
         android:text="@string/powered_off"
         app:layout_constraintEnd_toStartOf="@+id/checkBoxPoweredOn"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textNormalPosition" />
+        app:layout_constraintTop_toBottomOf="@+id/textAxisName" />
 
     <CheckBox
         android:id="@+id/checkBoxPoweredOn"
@@ -139,7 +139,7 @@
         android:layout_marginEnd="32dp"
         android:text="@string/powered_on"
         app:layout_constraintEnd_toStartOf="@+id/checkBoxInError"
-        app:layout_constraintTop_toBottomOf="@+id/editNormalPosition" />
+        app:layout_constraintTop_toBottomOf="@+id/editAxisName" />
 
     <CheckBox
         android:id="@+id/checkBoxSimulatedPoweredOn"
@@ -162,7 +162,7 @@
         android:layout_marginEnd="24dp"
         android:text="@string/in_error"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editNormalPosition" />
+        app:layout_constraintTop_toBottomOf="@+id/editAxisName" />
 
     <Button
         android:id="@+id/btnRefresh"
