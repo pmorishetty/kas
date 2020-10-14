@@ -4,7 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import com.kollmorgen.kas.R;
+import com.kollmorgen.kas.service.RetrofitInstance;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,9 +22,18 @@ public class MainActivity extends AppCompatActivity {
       loginBtn.setOnClickListener(new View.OnClickListener() {
          @Override
          public void onClick(View view) {
-            // code here
-            Intent intent = new Intent(MainActivity.this, AxisOverview.class);
-            startActivity(intent);
+            EditText ipAddressText = findViewById(R.id.editTextIPAddress);
+
+            Boolean status = RetrofitInstance.setIpAddress(ipAddressText.getText().toString());
+
+            if (status) {
+
+               Intent intent = new Intent(MainActivity.this, AxisOverview.class);
+               startActivity(intent);
+
+            } else {
+               Toast.makeText(getApplicationContext(), "Login Failed", Toast.LENGTH_SHORT).show();
+            }
          }
       });
    }
